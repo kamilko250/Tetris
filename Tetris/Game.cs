@@ -109,7 +109,7 @@ namespace Tetris
             {
                 row += "[";
                 for (int k = 0; k < Width; k++)
-                    row += " " + (displayTab[i, k] == 1 ? "1" : " ");
+                    row += " " + (displayTab[i, k] == 1 ? "o" : " ");
                 row += "]\n";
                 sb.Append(row);
                 row = "";
