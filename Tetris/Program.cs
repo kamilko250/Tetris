@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Tetris
 {
@@ -30,11 +31,16 @@ namespace Tetris
                         game.MoveFigureDownAndCheckFullRows();
                         break;
                 }
-                
+                Thread.Sleep(200);
             }
             Console.Clear();
             Console.WriteLine("Game Over");
             Console.WriteLine($"Score: {game.Points}");
+
+
+            Console.WriteLine("\nPress enter to exit game");
+            while (Console.ReadKey(false).Key != ConsoleKey.Enter);
+
         }
     }
 }
